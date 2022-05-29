@@ -30,6 +30,24 @@ class MainActivity : AppCompatActivity() {
         val myToast = Toast.makeText(this, "Привет, Учитель!", Toast.LENGTH_SHORT)
         myToast.show()
     }
+
+     fun ObjectPersonMe(view: View) {
+        val textView: TextView = findViewById(R.id.textViewResult)
+        textView.text = genData()
+    }
+    private fun genData(): String {
+        val woman2 = Woman.copy(age = "17")
+        val array = arrayOf(woman2)
+        val arrayIndex = nextInt(array.size)
+        return array[arrayIndex].toString()
+    }
+
+
+private fun Any.copy(age: String) {}
 }
+
+
+
+
 
 
